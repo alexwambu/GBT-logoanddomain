@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gbt-deploy
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: GITHUB_TOKEN
+        value: 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
+      - key: PORT
+        value: 10000
